@@ -292,7 +292,8 @@
         }
     </style>
     
-<style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+<style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><style id="style-1-cropbar-clipper">
+/* Copyright 2014 Evernote Corporation. All rights reserved. */
 .en-markup-crop-options {
     top: 18px !important;
     left: 50% !important;
@@ -345,7 +346,7 @@
 <div id="section1">
       <div class="container">
         <h2>Que podemos implementar?</h2>
-        <p>Tu proyecto sera capaz de:</p>
+        <p>Tu proyecto contara con:</p>
         <ul>
           <li>Diseño responsable, optimizado para los diferentes dispositivos que tus clientes utilicen.</li>
           <li>Disponibilidad, disponible en todo momento.</li>
@@ -390,21 +391,15 @@
       </div>
     </footer>
     
-<script src="./CS256  Mobile Web Development - full content with styles_files/analytics.js"></script><script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='//www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-24532603-1');ga('send','pageview');
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    var isCompleted = {};
-    function sampleCompleted(sampleName){
-      if (ga && !isCompleted.hasOwnProperty(sampleName)) {
-        ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
-        isCompleted[sampleName] = true;
-      }
-    }
+  ga('create', 'UA-54365635-1', 'auto');
+  ga('send', 'pageview');
+
 </script>    <script type="text/javascript">
       function init() {
         window.matchMedia("(max-width: 600px)").addListener(hitMQ);
