@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Desarrollo de Aplicaciones Web by Ezzeker</title>
+  <meta charset="utf-8"/>
+  <meta content="Bryan O. Ramirez Chavez" name="author" />
+  <meta content="Web de un Desarrollador, Técnico de redes y comunicaciones con especiencia en Software libre y bases de datos SQL server y Oracle" name="description"/>
+  <meta content="tecnologia, desarrollo, ezzeker, developer" name="keywords" />
+  <link rel="shortcut icon" href="imagenes/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,200,100&subset=latin,cyrillic" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #headline {
+        padding: 0.8em;
+        color: white;
+        font-family: Roboto, helvetica, arial, sans-serif;
+        background-color: black;
+        background-image: url("imagenes/code1.png");
+        background-size: cover;
+      }
+
+      #headline h1 {
+        font-weight: 200;
+        font-size: 60px;
+        line-height: 1em;
+        margin-bottom: 0;
+      }
+        
+      #headline h2 {
+        font-weight: 200;
+        font-size: 30px;
+        margin-top: 5px;
+      }
+
+      #headline #blurb {
+        font-weight: 300;
+        font-size: 18px;
+      }
+
+      #headline #register {
+        background-color: #39b1a4;
+        background-color: rgba(57,177, 164, 0.7);
+        padding: 1em;
+      }
+
+      #headline #register h2 {
+        font-weight: 100;
+        padding: 0;
+        margin: 0;
+      }
+
+      #headline #register label {
+        font-size: 1.2em;
+        font-weight: 200;
+        padding-top: 12px;
+        display: block;
+      }
+
+      #headline #register input {
+        width: 100%;
+        font-size: 18px;
+        font-weight: 200;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      #headline #register input[type=submit] {
+        background-color: hsl(8, 70%, 54%);
+        color: white;
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        box-sizing: border-box;
+        font-size: 18px;
+      }
+
+      #section1, #section2, #section3 {
+        box-sizing: border-box;
+        padding: 20px;
+      }
+
+      #section1 h2, #section2 h2, #section3 h2  {
+        margin-top: 0;
+        font-size: 24px
+      }
+
+      #section1 {
+        background-color: white;
+        font-family: Roboto, sans-serif;
+        font-weight: 100;
+        font-size: 18px;
+      }
+
+      #section1 h2 {
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 20px;
+      }
+
+      #section1 h2 + p {
+      }
+
+      #section1 video {
+        width: 100%;
+      }
+
+      #section2 {
+        background-color: #e9e9e9;
+        font-family: Roboto, sans-serif;
+        font-weight: 100;
+        font-size: 18px;
+      }
+
+      #section2 h2 {
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 20px;
+      }
+
+      #section2 h2 + p {
+        text-align: center;
+      }
+
+      #section2 div {
+        text-align: center;
+      }
+
+      #section2 div img {
+        width: 100%
+      }
+
+      #section3 {
+        background-color: #f5f5f5;
+        font-family: Roboto, sans-serif;
+        font-weight: 100;
+        text-align: center;
+        margin: auto;
+      }
+
+      #section3 h2 {
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 20px;
+      }
+
+      #section3 h2 + p {
+        text-align: center;
+      }
+
+      #section3 figure {
+        text-align: center;
+      }
+
+      #section3 figure figcaption {
+        text-align: center;
+        font-weight: 400;
+      }
+
+      footer {
+        font-family: Roboto, sans-serif;
+        font-weight: 300;
+        text-align: center;
+        background-color: hsl(8, 70%, 54%);
+        color: white;
+        padding-bottom: 20px;
+        padding-top: 20px;
+      }
+
+      table {
+        margin-top: 26px;
+        width: 100%;
+      }
+      thead {
+        font-weight: bold;
+      }
+
+      tbody {
+        text-align: center;
+      }
+
+      
+@media screen and (max-width: 600px) {
+        table thead {
+          display: none;
+        }
+
+        table td {
+          display: block;
+          position: relative;
+          padding-left: 50%;
+          padding-top: 13px;
+          padding-bottom: 13px;
+          text-align: left;
+          background: #e9e9e9;
+        }
+
+        table td:before {
+          content: attr(data-th) " :";
+          display: inline-block;
+          color: #000000;
+          background: #e9e9e9;
+          border-right: 2px solid transparent;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 33%;
+          max-height: 100%;
+
+          font-size: 16px;
+          font-weight: 300;
+          padding-left: 13px;
+          padding-top: 13px;
+        }
+      }
+      
+@media screen and (min-width: 600px) {
+          #headline {
+            padding: 20px 5%;
+          }
+          
+          .container {
+            margin: auto;
+            max-width: 800px;
+          }
+
+          #headline #blurb {
+            float: left; 
+            font-weight: 200;
+            width: 50%;
+            font-size: 18px;
+            box-sizing: border-box;
+            padding-right: 10px;
+          }
+
+          #headline br {
+            clear: both;
+          }
+
+          #headline #register {
+            float:right;
+            padding: 20px;
+            width: 50%;
+            box-sizing: border-box;
+            font-weight: 300;
+          }
+          
+          #section1 #section2, #section3 {
+            box-sizing: border-box;
+            padding: 10px 20% 80px 20%;
+          }
+          
+          #section1 h2, #section2 h2, #section3 h2  {
+            margin-top: 0;
+            font-size: 60px
+          }
+          
+          #section1 ul {
+            box-sizing: border-box;
+            float: left;
+            width: 50%;
+            padding-right: 1em;
+          }
+          
+          #section1 video {
+            box-sizing: border-box;
+            width: 50%;
+            float: right;
+          }
+
+          #section1 br {
+            clear: both;
+          }
+          
+          #section2 div img {
+            width: 30%;
+            margin: 1%;
+            box-sizing: border-box;
+            border-radius: 50% 50%;
+            box-shadow: black 0px 0px 5px;
+          }
+        }
+    </style>
+    
+<style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -90px !important;
+    width: 180px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+  <body>   
+    
+<div id="headline">
+      <div class="container">
+        <header>
+          <strong><h1>Soluciones Frontend y Backend</h1></strong>
+          <p>Experto en Desarollo Web y Software</p>
+        </header>
+        <div id="blurb">
+          <p>Implementar soluciones Web suele ser un gran desafio. Los requerimientos de los usuarios 
+          varian en relacion a sus necesidad o plataforma de servicios. En el mundo del desarrollo Web
+          Contamos con experiencia comprobada y las mas modernas y eficientes metodologias de trabajo.</p>
+          <p>Diseñamos Aplicaciones web a la medida de las necesidades y utilizamos poderoso
+          sistemas de control de versiones capaces de realizar control atomico de los cambios.</p>
+          <p>Nos especializamos en los siguientes lenguajes(modelamiento,estilos) de desarrollo Web:</p>
+          <ul>
+            <li>Python, 
+            </li><li>Ruby and Ruby On Rails,
+            </li><li>C#,
+          </li><li>HTML - CSS - JavaScript</li></ul>
+        </div>
+        <form method="post" id="register">
+           <h2>Contáctanos</h2>
+           <label for="name">Nombre</label>
+           <input type="text" name="name" id="name" placeholder="Omar Ramirez Chavez" required="">
+           <label for="email">Email</label>
+           <input type="email" name="email" id="email" placeholder="b@ezzeker.com" required="">
+           <label for="tel">Telefono</label>
+           <input type="tel" name="tel" id="tel" placeholder="999999999" required="">
+           <input type="submit" value="Enviar">
+        </form>
+        <br>
+      </div>
+    </div>
+    
+
+<div id="section1">
+      <div class="container">
+        <h2>Que podemos implementar?</h2>
+        <p>Tu proyecto sera capaz de:</p>
+        <ul>
+          <li>Diseño responsable, optimizado para los diferentes dispositivos que tus clientes utilicen.</li>
+          <li>Disponibilidad, disponible en todo momento.</li>
+          <li>Escalable, por que sabemos que necesitaras crecer.</li>
+        </ul>
+        <video controls="" poster="udacity.png">
+          <source src="udacity.mp4" type="video/mp4">
+          <source src="udacity.webm" type="video/webm">
+          <p>Sorry your browser doesn't support video. 
+             <a href="https://google-developers.appspot.com/web/fundamentals/resources/samples/getting-started/your-first-multi-screen-site/udacity.mov">Download the video</a>.
+          </p>
+        </video>
+        <br>
+      </div>
+    </div>
+    
+
+<div id="section2">
+      <div class="container">
+        <h2>Quien soy yo?</h2>
+        <p>Bryan Ramirez, Tecnico de redes y comunicaciones, developer, colaborador en </p><a href="https://github.com/ezzeker1">Github</a>
+        <div id="images">
+          <img src="imagenes/bryan-ramirez.jpg" alt="Bryan Omar Ramirez Chavez">
+          
+        </div>
+        <br>
+      </div>
+    </div>
+    
+
+<div id="section3">
+      <div class="container">
+        <h2>Por desarrollar en </h2><h2><strong>Mobile?</strong></h2>
+        <p>Multiplataforma, acceso desde cualquier dispositivo.</p>
+      </div>
+    </div>
+    
+
+<footer>
+      <div class="container">
+        <p>© 2014 Ezzeker, Inc.</p>
+      </div>
+    </footer>
+    
+<script src="./CS256  Mobile Web Development - full content with styles_files/analytics.js"></script><script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-24532603-1');ga('send','pageview');
+
+    var isCompleted = {};
+    function sampleCompleted(sampleName){
+      if (ga && !isCompleted.hasOwnProperty(sampleName)) {
+        ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+        isCompleted[sampleName] = true;
+      }
+    }
+</script>    <script type="text/javascript">
+      function init() {
+        window.matchMedia("(max-width: 600px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("GettingStarted-ContentWithStyles");
+      }
+
+      init();
+
+    </script>
+  
+</body></html>
